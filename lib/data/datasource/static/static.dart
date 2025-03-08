@@ -6,20 +6,20 @@ List<Onbordingmodel> onBoardingList = [
       title: 'Choose Product',
       body:
           'We Have a 100k Products Choose\n your Product From our E-\ncomerce shope',
-      image: ImageAsset.onBoardingImage1),
+      image: AppImage.onBoardingImage1),
   Onbordingmodel(
       title: 'Easy & safe Payment',
       body:
           'We Have a 100k Products Choose\n your Product From our E-\ncomerce shope',
-      image: ImageAsset.onBoardingImage2),
+      image: AppImage.onBoardingImage2),
   Onbordingmodel(
       title: 'Track Your Order',
       body:
           'We Have a 100k Products Choose\n your Product From our E-\ncomerce shope',
-      image: ImageAsset.onBoardingImage3),
+      image: AppImage.onBoardingImage3),
   Onbordingmodel(
       title: 'Fast Delivery',
       body:
           'We Have a 100k Products Choose\n your Product From our E-\ncomerce shope',
-      image: ImageAsset.onBoardingImage4),
+      image: AppImage.onBoardingImage4),
 ];
