@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/routes.dart';
 import 'package:ecommerce_app/view/screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: OnBoardingScreen(),
+      routes: routes,
     );
   }
 }

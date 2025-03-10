@@ -1,44 +1,39 @@
-import 'package:ecommerce_app/core/constant/color.dart';
-import 'package:ecommerce_app/data/datasource/static/static.dart';
+import 'package:ecommerce_app/controller/onbordin_controller.dart';
+import 'package:ecommerce_app/view/widget/onboarding/custombotton.dart';
+import 'package:ecommerce_app/view/widget/onboarding/customslider.dart';
+import 'package:ecommerce_app/view/widget/onboarding/dotcontroller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(OnbordingController());
     return SafeArea(
       child: Scaffold(
-        body: PageView.builder(
-          clipBehavior: Clip.none,
-          itemCount: onBoardingList.length,
-          itemBuilder: (context, i) {
-            return Column(
-              spacing: 80,
-              children: [
-                Text(
-                  onBoardingList[i].title!,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-                Image.asset(onBoardingList[i].image!,height: 250,width: 200,),
-                Container(
-                    alignment: Alignment.center,
-                    width: double.infinity,
-                    child: Text(
-                      onBoardingList[i].body!,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColor.grey,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                    )),
-              ],
-            );
-          },
+        body: Column(
+          children: [
+            SizedBox(
+              height: 45,
+            ),
+            Expanded(flex: 2, child: CustomSlider()),
+            Expanded(
+                flex: 1,
+                child: Column(
+                  children: [
+                    Dotcontroller(),
+                    Spacer(
+                      flex: 2,
+                    ),
+                    CustombottonOboarding(),
+                    SizedBox(
+                      height: 50,
+                    ),
+                  ],
+                ))
+          ],
         ),
       ),
     );
