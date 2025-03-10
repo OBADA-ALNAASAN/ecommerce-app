@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/controller/onbordin_controller.dart';
-import 'package:ecommerce_app/core/constant/color.dart';
 import 'package:ecommerce_app/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,10 +21,7 @@ class CustomSlider extends GetView<OnbordingController> {
           children: [
             Text(
               onBoardingList[i].title!,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: Theme.of(context).textTheme.headlineMedium
             ),
             Image.asset(
               onBoardingList[i].image!,
@@ -38,11 +34,7 @@ class CustomSlider extends GetView<OnbordingController> {
                 child: Text(
                   onBoardingList[i].body!,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: AppColor.grey,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17,
-                  ),
+                  style:Theme.of(context).textTheme.bodyMedium
                 )),
           ],
         );
