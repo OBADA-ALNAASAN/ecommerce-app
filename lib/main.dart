@@ -2,6 +2,7 @@ import 'package:ecommerce_app/core/constant/color.dart';
 import 'package:ecommerce_app/core/localization/translation.dart';
 import 'package:ecommerce_app/core/services/services.dart';
 import 'package:ecommerce_app/routes.dart';
+import 'package:ecommerce_app/view/screen/auth/language_screen.dart';
 import 'package:ecommerce_app/view/screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+      home: LanguageScreen(),
       routes: routes,
       translations: AppTranslation(),
       theme: ThemeData(
