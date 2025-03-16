@@ -16,7 +16,7 @@ class OnBoardingScreen extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(
-              height: 45,
+              height: 15,
             ),
             Expanded(flex: 2, child: CustomSlider()),
             Expanded(
@@ -29,7 +29,7 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
                     CustombottonOboarding(),
                     SizedBox(
-                      height: 50,
+                      height: 20,
                     ),
                   ],
                 ))

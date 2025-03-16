@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constant/image.dart';
+import 'package:ecommerce_app/core/constant/app_image.dart';
 import 'package:ecommerce_app/data/model/onbordingmodel.dart';
 
 List<Onbordingmodel> onBoardingList = [

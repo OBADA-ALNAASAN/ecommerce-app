@@ -1,7 +1,10 @@
+import 'package:ecommerce_app/core/constant/app_routes.dart';
+import 'package:ecommerce_app/core/localization/changelocal.dart';
 import 'package:ecommerce_app/view/widget/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class LanguageScreen extends StatelessWidget {
+class LanguageScreen extends GetView<LocaleController> {
   const LanguageScreen({super.key});
 
   @override
@@ -20,11 +23,17 @@ class LanguageScreen extends StatelessWidget {
             ),
             CustomButton(
               title: 'Ar',
-              onTap: () {},
+              onTap: () {
+                Get.toNamed(AppRoutes.onBoarding);
+                controller.changeLang('ar');
+              },
             ),
             CustomButton(
               title: 'En',
-              onTap: () {},
+              onTap: () {
+                controller.changeLang('en');
+                Get.toNamed(AppRoutes.onBoarding);
+              },
             ),
           ],
         ),

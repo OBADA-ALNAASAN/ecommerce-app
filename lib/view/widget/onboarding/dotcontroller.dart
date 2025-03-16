@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controller/onbordin_controller.dart';
-import 'package:ecommerce_app/core/constant/color.dart';
+import 'package:ecommerce_app/core/constant/App_color.dart';
 import 'package:ecommerce_app/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';

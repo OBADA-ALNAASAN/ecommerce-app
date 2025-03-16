@@ -17,12 +17,10 @@ class CustomSlider extends GetView<OnbordingController> {
       itemCount: onBoardingList.length,
       itemBuilder: (context, i) {
         return Column(
-          spacing: 75,
+          spacing: 20,
           children: [
-            Text(
-              onBoardingList[i].title!,
-              style: Theme.of(context).textTheme.headlineMedium
-            ),
+            Text(onBoardingList[i].title!,
+                style: Theme.of(context).textTheme.headlineMedium),
             Image.asset(
               onBoardingList[i].image!,
               height: 250,
@@ -31,11 +29,9 @@ class CustomSlider extends GetView<OnbordingController> {
             Container(
                 alignment: Alignment.center,
                 width: double.infinity,
-                child: Text(
-                  onBoardingList[i].body!,
-                  textAlign: TextAlign.center,
-                  style:Theme.of(context).textTheme.bodyMedium
-                )),
+                child: Text(onBoardingList[i].body!,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium)),
           ],
         );
       },

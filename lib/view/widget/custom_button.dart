@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constant/color.dart';
+import 'package:ecommerce_app/core/constant/App_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -11,9 +11,6 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 100,
-        ),
         height: 45,
         decoration: BoxDecoration(
             color: AppColor.primaryColor,
