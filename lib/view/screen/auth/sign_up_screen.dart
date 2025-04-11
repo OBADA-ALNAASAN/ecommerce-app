@@ -1,25 +1,25 @@
-import 'package:ecommerce_app/controller/auth/login_controller.dart';
+import 'package:ecommerce_app/controller/auth/sign_up_contoller.dart';
+
 import 'package:ecommerce_app/view/widget/auth/custom_body_text_auth.dart';
+import 'package:ecommerce_app/view/widget/auth/custom_text_form_field.dart';
 import 'package:ecommerce_app/view/widget/auth/custom_text_signin_or_login.dart';
 import 'package:ecommerce_app/view/widget/auth/custom_title_auth.dart';
-import 'package:ecommerce_app/view/widget/auth/custom_text_form_field.dart';
-import 'package:ecommerce_app/view/widget/auth/logo_auth.dart';
 import 'package:ecommerce_app/view/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    LoginController controller = Get.put(LoginController());
+    SignUpContoller controller = Get.put(SignUpContoller());
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Sign In",
+            "Sign Up",
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall!
@@ -30,7 +30,6 @@ class LoginScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
           child: ListView(
             children: [
-              LogoAuth(),
               CustomTitleAuth(
                 title: 'Welcom Back',
               ),
@@ -45,10 +44,22 @@ class LoginScreen extends StatelessWidget {
                 height: 30,
               ),
               CustomTextFormField(
+                label: 'User Name',
+                icon: Icons.person_outline,
+                hint: 'Enter your Name',
+                textEditingController: controller.username,
+              ),
+              CustomTextFormField(
                 label: 'Email',
                 icon: Icons.email_outlined,
                 hint: 'Enter your Email',
                 textEditingController: controller.email,
+              ),
+              CustomTextFormField(
+                label: 'Password',
+                icon: Icons.phone_android_outlined,
+                hint: 'Enter your Phone',
+                textEditingController: controller.phone,
               ),
               CustomTextFormField(
                 label: 'Password',
@@ -76,7 +87,7 @@ class LoginScreen extends StatelessWidget {
               ),
               CustomTextSigninOrLogin(
                 onTap: () {
-                  controller.goToSignUp();
+                  controller.goToLogin();
                 },
                 text1: "Dont have an account?",
                 text2: "Sign Up",
