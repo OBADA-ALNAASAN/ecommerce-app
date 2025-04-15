@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/controller/auth/sign_up_contoller.dart';
 
 import 'package:ecommerce_app/view/widget/auth/custom_body_text_auth.dart';
+import 'package:ecommerce_app/view/widget/auth/custom_forget_password.dart';
 import 'package:ecommerce_app/view/widget/auth/custom_text_form_field.dart';
 import 'package:ecommerce_app/view/widget/auth/custom_text_signin_or_login.dart';
 import 'package:ecommerce_app/view/widget/auth/custom_title_auth.dart';
@@ -70,11 +71,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text(
-                "Forget Password",
-                textAlign: TextAlign.end,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              CustomForgetPassword(),
               SizedBox(
                 height: 10,
               ),
